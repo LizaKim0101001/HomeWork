@@ -1,0 +1,65 @@
+@import "./mixin.scss";
+.footer-wrapper{
+    border-top: 1px solid $grey;
+    max-width: 429px;
+    @include flex (flex, row, space-between, center, wrap);
+    padding: 18px 5px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.copyright{
+    &-item{
+        font-size: 12px;
+        line-height: 12px;
+        font-style: normal;
+        color: $grey;
+        &__link{
+            text-decoration: none;
+            color: $primary;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 12px;
+        }
+        &__separator{
+            color: $grey;
+        }
+    }
+}
+
+.social{
+    list-style: none;
+    @include flex (flex, row, normal, normal, wrap);
+    &-item{
+        flex: 1;
+        &__img{
+            max-width: 32px;
+            max-height: 32px;
+            color: $grey;
+        }
+    }
+}
+
+@media screen and (min-width: $mobile){
+    .footer-wrapper{
+        max-width: 560px;
+        padding: 18px 0px;
+    }
+}
+
+@media screen and (min-width: $tablet){
+    .footer-wrapper{
+        max-width: 716px;
+        padding: 20px 0;
+    }
+}
+@media screen and (min-width:$tablet-l){
+    .footer-wrapper{
+        max-width: 896px;
+    }
+}
+@media screen and (min-width:$desctop){
+    .footer-wrapper{
+        max-width: 1088px;
+    }
+}

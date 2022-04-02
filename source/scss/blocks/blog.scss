@@ -1,0 +1,151 @@
+@import "./mixin.scss";
+
+.blog{
+    &-wrapper{
+    max-width: $width-for-mobile;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    }
+    &-list{
+        list-style: none;
+        padding: 0 18px;
+        @include flex (flex, column, space-evenly, normal, wrap);
+    }
+    &-item{
+        margin-bottom: 25px;
+        width: 100%;
+        &__img{
+            border: 1px solid $grey;
+            margin-bottom: 9px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        &__title{
+            font-size: 22px;
+            line-height: 21px;
+            color: $primary;
+            font-style: normal;
+            margin-bottom: 25px;
+            letter-spacing: -0.4px;
+        }
+        &__description{
+            font-size: 18px;
+            line-height: 20px;
+            font-style: normal;
+            margin-bottom: 10px;
+            letter-spacing: -0.4px;
+        }
+        &__data{
+            font-size: 16px;
+            line-height: 20px;
+            font-style: normal;
+            color: $grey;
+        }
+        &__link{
+            font-size: 16px;
+            line-height: 20px;
+            font-style: normal;
+            color: $primary;
+        }
+    }
+}
+@media screen and (min-width:$mobile){
+    .blog{
+        &-wrapper{
+            margin-bottom: 20px;
+            max-width: $width-mobile-tablet;
+        }
+        &-list{
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &-item{
+            width: 45%;
+            height: 340px;
+            @include flex (flex, column, normal, normal, wrap);
+            &__img{
+                margin-bottom: 16px;
+                min-height: 145px;
+            }
+            &__title{
+                font-size: 16px;
+                margin-bottom: 7px;
+            }
+            &__description{
+                font-size: 14px;
+                margin-bottom: 0;
+
+            }
+            &__for-data{
+                margin-top: auto;
+                height: 20px;
+            }
+            &__data{
+                font-size: 14px;
+            }
+            &__link{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media screen and (min-width:$tablet){
+    .blog{
+        &-wrapper{
+            max-width: $width-tablet-tablet-l;
+            margin-bottom: 71px;
+        }
+        &-list{
+            justify-content: space-between;
+        }
+        &-item{
+            display: block;
+            width: 157px;
+
+            &__img{
+                width: 144px;
+                min-height: 100px;
+                margin-bottom: 15px;
+            }
+            &__title{
+                margin-bottom: 8px;
+            }
+            &__description{
+                margin-bottom: 7px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-l){
+    .blog{
+        &-wrapper{
+            margin-bottom: 42px;
+            max-width: $width-tablet-l-desctop;
+        }
+        &-item{
+            width: 159px;
+            &__img{
+                width: 150px;
+                min-height: 105px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desctop){
+    .blog{
+        &-wrapper{
+            margin-bottom: 30px;
+            max-width: $width-desctop;
+        }
+        &-item{
+            width: 207px;
+            &__img{
+                width: 200px;
+                min-height: 137px;
+            }
+        }
+    }
+}

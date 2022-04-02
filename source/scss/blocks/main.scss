@@ -1,0 +1,21 @@
+@import "./mixin.scss";
+
+@media screen and (min-width:$tablet-l){
+    .page-wrapper{
+        margin: 50px auto 0 auto;
+        max-width: 896px;
+        @include flex (flex, row, space-between, normal, wrap);
+    }
+    .page-main{
+        width: 712px;
+    }
+}
+@media screen and (min-width:$desctop){
+    .page-wrapper{
+        margin: 50px auto 0 auto;
+        max-width: 1080px;
+    }
+    .page-main{
+        width: 896px;
+    }
+}

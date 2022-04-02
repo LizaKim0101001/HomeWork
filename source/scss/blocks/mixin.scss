@@ -1,0 +1,37 @@
+$black: #000000;
+$light: #EFF8F7;
+$light-active: #D9EFEC;
+$primary: #34ACA7;
+$grey: #E5E5E5;
+$mobile: 480px;
+$tablet: 768px;
+$tablet-l: 992px;
+$desctop: 1178px;
+$border: 1px solid $grey;
+
+/* размеры для блоков blog & subscribe*/
+$width-for-mobile: 414px;
+$width-mobile-tablet: 560px;
+$width-tablet-tablet-l: 710px;
+$width-tablet-l-desctop: 712px;
+$width-desctop: 896px;
+
+/* для списков*/
+@mixin flex ( $display, $direction, $justify, $align, $wrap) {
+
+        display: $display;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
+        flex-wrap: $wrap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    font-style: italic;
+}

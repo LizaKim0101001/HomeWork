@@ -1,0 +1,113 @@
+@import "./mixin.scss";
+.subscribe{
+    border-top: $border;
+    border-bottom: $border;
+    margin-bottom: 29px;
+
+    &-wrapper{
+        margin: 0 auto;
+        max-width: $width-for-mobile;
+        box-sizing: border-box;
+    }
+    &-description{
+        margin-top: 11px;
+        margin-bottom: 11px;
+        @include flex (flex, row, space-between, flex-start, no-wrap);
+        box-sizing: border-box;
+    }
+    &-img{
+        display: block;
+        min-width: 32px;
+        min-height: 26px;
+        margin-right: 16px;
+    }
+    &-form{
+        margin-bottom: 34px;
+        @include flex (flex, row, space-between, center, wrap);
+    }
+    &-input{
+        height: 23px;
+        box-sizing: border-box;
+        width: 77%;
+    }
+    &-btn{
+        width: 80px;
+        height: 23px;
+        font-size: 10px;
+        line-height: 10px;
+        font-style: normal;
+        box-sizing: border-box;
+        border: 1px solid $grey;
+        background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+    }
+}
+
+@media screen and (min-width:$mobile){
+    .subscribe{
+        border: none;
+        margin-bottom: 26px;
+
+        &-wrapper{
+            border-top: $border;
+            border-bottom: $border;
+            max-width: $width-mobile-tablet;
+        }
+        &-description{
+            padding: 0 24px;
+            margin-top: 10px;
+            margin-bottom: 13px;
+        }
+        &-form{
+            padding: 0 24px;
+            margin-bottom: 17px;
+        }
+    }
+}
+@media screen and (min-width:$tablet){
+    .subscribe{
+        margin-bottom: 28px;
+        &-wrapper{
+        @include flex (flex, row, space-between, center, wrap);
+            padding: 10px 16px;
+            max-width: $width-tablet-tablet-l;
+        }
+        &-description{
+            margin: 0;
+            padding: 0;
+            max-width: 412px;
+        }
+        &-form{
+            margin: 0;
+            padding: 0;
+            min-width: 258px;
+        }
+        &-input{
+            margin-right: 18px;
+            max-width: 160px;
+        }
+    }
+}
+@media screen and (min-width:$tablet-l){
+    .subscribe{
+        margin-bottom: 25px;
+        &-wrapper{
+        max-width: $width-tablet-l-desctop;
+        padding: 7px 15px 12px;
+        }
+        &-description{
+            align-items: center;
+        }
+    }
+}
+@media screen and (min-width:$desctop){
+    .subscribe{
+        margin-bottom: 30px;
+        &-wrapper{
+            padding-bottom: 10px;
+            max-width: $width-desctop;
+        }
+        &-description{
+            max-width: 578px;
+        }
+    }
+}
