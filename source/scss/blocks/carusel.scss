@@ -39,7 +39,7 @@
     }
 }
 
-@media screen and (min-width:$mobile) {
+@include response('mobile'){
     .wrapper{
         max-width: $width-mobile-tablet;
     }
@@ -57,7 +57,7 @@
         }
     }
 }
-@media screen and (min-width:$tablet) {
+@include response('tablet'){
     .wrapper{
         max-width: $width-tablet-tablet-l;
     }
@@ -101,12 +101,12 @@
         }
     }
 }
-@media screen and (min-width:$tablet-l){
+@include response('tablet-l'){
     .wrapper{
         max-width: $width-tablet-l-desctop;
     }
 }
-@media screen and (min-width:$desctop){
+@include response('desctop'){
     .wrapper{
         max-width: $width-desctop;
     }

@@ -1,6 +1,6 @@
 @import "./mixin.scss";
 
-@media screen and (min-width:$tablet-l){
+@include response('tablet-l'){
     .page-wrapper{
         margin: 50px auto 0 auto;
         max-width: 896px;
@@ -10,7 +10,7 @@
         width: 712px;
     }
 }
-@media screen and (min-width:$desctop){
+@include response('desctop'){
     .page-wrapper{
         margin: 50px auto 0 auto;
         max-width: 1080px;

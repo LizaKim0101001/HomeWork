@@ -39,26 +39,25 @@
         }
     }
 }
-
-@media screen and (min-width: $mobile){
+@include response('mobile'){
     .footer-wrapper{
         max-width: 560px;
         padding: 18px 0px;
     }
 }
 
-@media screen and (min-width: $tablet){
+@include response('tablet'){
     .footer-wrapper{
         max-width: 716px;
         padding: 20px 0;
     }
 }
-@media screen and (min-width:$tablet-l){
+@include response('tablet-l'){
     .footer-wrapper{
         max-width: 896px;
     }
 }
-@media screen and (min-width:$desctop){
+@include response('desctop'){
     .footer-wrapper{
         max-width: 1088px;
     }

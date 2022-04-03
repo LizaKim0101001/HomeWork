@@ -49,7 +49,7 @@
         }
     }
 }
-@media screen and (min-width:$mobile){
+@include response('mobile'){
     .blog{
         &-wrapper{
             margin-bottom: 20px;
@@ -90,7 +90,7 @@
         }
     }
 }
-@media screen and (min-width:$tablet){
+@include response('tablet'){
     .blog{
         &-wrapper{
             max-width: $width-tablet-tablet-l;
@@ -118,7 +118,7 @@
     }
 }
 
-@media screen and (min-width: $tablet-l){
+@include response('tablet-l'){
     .blog{
         &-wrapper{
             margin-bottom: 42px;
@@ -134,7 +134,7 @@
     }
 }
 
-@media screen and (min-width: $desctop){
+@include response('desctop'){
     .blog{
         &-wrapper{
             margin-bottom: 30px;

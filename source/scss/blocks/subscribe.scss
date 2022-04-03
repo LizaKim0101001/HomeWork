@@ -41,8 +41,7 @@
         background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
     }
 }
-
-@media screen and (min-width:$mobile){
+@include response('mobile'){
     .subscribe{
         border: none;
         margin-bottom: 26px;
@@ -63,7 +62,7 @@
         }
     }
 }
-@media screen and (min-width:$tablet){
+@include response('tablet'){
     .subscribe{
         margin-bottom: 28px;
         &-wrapper{
@@ -87,7 +86,7 @@
         }
     }
 }
-@media screen and (min-width:$tablet-l){
+@include response('tablet-l'){
     .subscribe{
         margin-bottom: 25px;
         &-wrapper{
@@ -99,7 +98,7 @@
         }
     }
 }
-@media screen and (min-width:$desctop){
+@include response('desctop'){
     .subscribe{
         margin-bottom: 30px;
         &-wrapper{

@@ -3,11 +3,15 @@ $light: #EFF8F7;
 $light-active: #D9EFEC;
 $primary: #34ACA7;
 $grey: #E5E5E5;
-$mobile: 480px;
-$tablet: 768px;
-$tablet-l: 992px;
-$desctop: 1178px;
+
 $border: 1px solid $grey;
+//размеры для адаптивности
+$breakpoints: (
+    'mobile': '(min-width:480px)',
+    'tablet': '(min-width:768px)',
+    'tablet-l': '(min-width:992px)',
+    'desctop': '(min-width:1178px)',
+);
 
 /* размеры для блоков blog & subscribe*/
 $width-for-mobile: 414px;
@@ -16,7 +20,7 @@ $width-tablet-tablet-l: 710px;
 $width-tablet-l-desctop: 712px;
 $width-desctop: 896px;
 
-/* для списков*/
+/* для флексбоксов*/
 @mixin flex ( $display, $direction, $justify, $align, $wrap) {
 
         display: $display;
@@ -25,6 +29,14 @@ $width-desctop: 896px;
         align-items: $align;
         flex-wrap: $wrap;
 }
+
+@mixin response($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+      @media #{$raw-query} {
+        @content;
+      } 
+  }
 
 *{
     margin: 0;

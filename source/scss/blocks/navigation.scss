@@ -34,7 +34,7 @@
 .for-desctop{
     display: none;
 }
-@media screen and (min-width: $mobile) {
+@include response('mobile'){
     .header-wrapper{
         margin: 21px auto 41px auto;
         max-width: $width-mobile-tablet;
@@ -53,8 +53,7 @@
         }
     }
 }
-
-@media screen and (min-width:$tablet) {
+@include response('tablet'){
     .header-wrapper{
         margin: 21px auto 51px auto;
         max-width: $width-tablet-tablet-l;
@@ -85,7 +84,7 @@
         }
     }
 }
-@media screen and (min-width:$tablet-l){
+@include response('tablet-l'){
     .header-wrapper{
         margin: 0;
         max-width: 140px;
