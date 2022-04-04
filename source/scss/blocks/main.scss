@@ -6,7 +6,7 @@
         max-width: 896px;
         @include flex (flex, row, space-between, normal, wrap);
     }
-    .page-main{
+    .left-column{
         width: 712px;
     }
 }
@@ -15,7 +15,7 @@
         margin: 50px auto 0 auto;
         max-width: 1080px;
     }
-    .page-main{
+    .left-column{
         width: 896px;
     }
 }
