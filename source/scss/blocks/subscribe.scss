@@ -33,9 +33,7 @@
     &-btn{
         width: 80px;
         height: 23px;
-        font-size: 10px;
-        line-height: 10px;
-        font-style: normal;
+        @include font( 10px, 10px, normal);
         box-sizing: border-box;
         border: 1px solid $grey;
         background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);

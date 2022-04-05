@@ -1,9 +1,13 @@
 @import "./mixin.scss";
 
+.page-main{
+    @include flex (flex, column, center, center, wrap);
+}
+
 @include response('tablet-l'){
     .page-wrapper{
-        margin: 50px auto 0 auto;
-        max-width: 896px;
+        margin-top: 50px;
+        width: 896px;
         @include flex (flex, row, space-between, normal, wrap);
     }
     .left-column{
@@ -12,8 +16,7 @@
 }
 @include response('desctop'){
     .page-wrapper{
-        margin: 50px auto 0 auto;
-        max-width: 1080px;
+        width: 1080px;
     }
     .left-column{
         width: 896px;

@@ -1,25 +1,25 @@
 @import "./mixin.scss";
-.footer-wrapper{
-    border-top: 1px solid $grey;
-    max-width: 429px;
-    @include flex (flex, row, space-between, center, wrap);
-    padding: 18px 5px;
-    margin: 0 auto;
-    box-sizing: border-box;
+.footer{
+    @include flex (flex, row, center, center, wrap);
+    width: 100%;
+    &-wrapper{
+        max-width: 429px;
+        border-top: 1px solid $grey;
+        @include flex (flex, row, space-between, center, wrap);
+        padding: 18px 5px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
 }
 
 .copyright{
     &-item{
-        font-size: 12px;
-        line-height: 12px;
-        font-style: normal;
+        @include font( 12px, 12px, normal);
         color: $grey;
         &__link{
             text-decoration: none;
             color: $primary;
-            font-style: normal;
-            font-size: 12px;
-            line-height: 12px;
+            @include font( 12px, 12px, normal);
         }
         &__separator{
             color: $grey;
@@ -40,25 +40,33 @@
     }
 }
 @include response('mobile'){
-    .footer-wrapper{
-        max-width: 560px;
-        padding: 18px 0px;
+    .footer{
+        &-wrapper{
+            max-width: 560px;
+            padding: 18px 0px;
+        }
     }
 }
 
 @include response('tablet'){
-    .footer-wrapper{
-        max-width: 716px;
-        padding: 20px 0;
+    .footer{
+        &-wrapper{
+            max-width: 716px;
+            padding: 20px 0;
+        }
     }
 }
 @include response('tablet-l'){
-    .footer-wrapper{
-        max-width: 896px;
+    .footer{
+        &-wrapper{
+            max-width: 896px;
+        }
     }
 }
 @include response('desctop'){
-    .footer-wrapper{
-        max-width: 1088px;
+    .footer{
+        &-wrapper{
+            max-width: 1088px;
+        }
     }
 }

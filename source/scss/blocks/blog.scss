@@ -21,30 +21,22 @@
             box-sizing: border-box;
         }
         &__title{
-            font-size: 22px;
-            line-height: 21px;
-            color: $primary;
-            font-style: normal;
+            @include font(22px, 21px, normal);
             margin-bottom: 25px;
+            color: $primary;
             letter-spacing: -0.4px;
         }
         &__description{
-            font-size: 18px;
-            line-height: 20px;
-            font-style: normal;
+            @include font( 18px, 20px, normal);
             margin-bottom: 10px;
             letter-spacing: -0.4px;
         }
         &__data{
-            font-size: 16px;
-            line-height: 20px;
-            font-style: normal;
+            @include font( 16px, 20px, normal);
             color: $grey;
         }
         &__link{
-            font-size: 16px;
-            line-height: 20px;
-            font-style: normal;
+            @include font( 16px, 20px, normal);
             color: $primary;
         }
     }

@@ -38,6 +38,11 @@ $width-desctop: 896px;
       } 
   }
 
+@mixin font ($size: 14px, $height: 16px, $style: italic) {
+  font-size: $size;
+  line-height: $height;
+  font-style: $style;
+}
 *{
     margin: 0;
     padding: 0;

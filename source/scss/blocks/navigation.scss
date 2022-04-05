@@ -117,9 +117,7 @@
             text-transform: uppercase;
             border-bottom: 2px dotted $grey;
             margin-bottom: 9px;
-            font-size: 12px;
-            line-height: 14px;
-            font-style: normal;
+            @include font( 12px, 14px, normal);
         }
         &-button{
             margin-bottom: 15px;
@@ -135,13 +133,11 @@
                 @include flex (flex, row, space-evenly, center, wrap);
                 text-decoration: none;
                 color: $primary;
-                font-size: 10px;
-                line-height: 12px;
+                @include font( 10px, 12px, italic);
             }
         }
         &-text{
-            font-size: 10px;
-            line-height: 19px;
+            @include font( 10px, 19px, italic);
             margin-bottom: 15px;
         }
     }

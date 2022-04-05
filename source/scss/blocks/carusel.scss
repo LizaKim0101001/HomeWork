@@ -22,8 +22,7 @@
         @include flex (flex, row, normal, center, wrap);
         height: 49px;
         padding: 0 6px;
-        font-size: 22px;
-        line-height: 22px;
+        @include font( 22px, 22px, italic);
         letter-spacing: 1px;
         vertical-align: middle;
         background-color: rgba(255, 255, 255, 0.6);
@@ -32,8 +31,7 @@
         @include flex (flex, row, normal, center, wrap);
         padding: 0 6px;
         height: 38px;
-        font-size: 14px;
-        line-height: 14px;
+        @include font( 14px, 14px, italic);
         background-color: $black;
         color: white;
     }
@@ -122,14 +120,11 @@
             @include flex (flex, column, center, flex-start, wrap);
 
             &__title{
-                font-size: 18px;
-                line-height: 18px;
+                @include font( 18px, 18px, italic);
             }
             &__text{
                 display: block;
-                font-size: 10px;
-                line-height: 19px;
-                font-style: italic;
+                @include font( 10px, 19px, italic);
             }
         }
     }
